@@ -1,0 +1,6 @@
+spring:
+  grpc:
+    server:
+      port: 9099
+server:
+  port: 8088
