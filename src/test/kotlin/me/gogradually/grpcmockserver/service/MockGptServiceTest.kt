@@ -19,7 +19,7 @@ class MockGptServiceTest {
         val coroutineTime = currentTime
 
         //when
-        val result = service.splitSchedule(title, content, expertise, listOf(), listOf())
+        val result = service.splitTask(title, content, expertise, listOf(), listOf())
 
         //then
         val elapsedTime = currentTime - coroutineTime

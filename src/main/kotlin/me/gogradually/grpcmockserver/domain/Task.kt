@@ -1,6 +1,6 @@
 package me.gogradually.grpcmockserver.domain
 
-class Schedule(
+class Task(
     title: String,
     description: String,
     steps: Int,

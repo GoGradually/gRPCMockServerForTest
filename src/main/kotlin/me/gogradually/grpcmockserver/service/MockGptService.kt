@@ -1,19 +1,19 @@
 package me.gogradually.grpcmockserver.service
 
 import kotlinx.coroutines.delay
-import me.gogradually.grpcmockserver.domain.Schedule
+import me.gogradually.grpcmockserver.domain.Task
 import me.gogradually.grpcmockserver.service.dto.SplitResult
-import me.gogradually.grpcmockserver.service.dto.SplitSchedule
+import me.gogradually.grpcmockserver.service.dto.SplitTask
 import org.springframework.stereotype.Service
 
 @Service
 class MockGptService {
-    suspend fun splitSchedule(
+    suspend fun splitTask(
         title: String,
         content: String,
         expertise: String,
-        finishedSchedule: List<Schedule>,
-        notFinishedSchedule: List<Schedule> ): SplitResult {
+        finishedTask: List<Task>,
+        notFinishedTask: List<Task> ): SplitResult {
         delay(10000)
         val split = listOf(
             "1. $title - Part 1: Introduction to Kotlin",
@@ -23,7 +23,7 @@ class MockGptService {
         return SplitResult(
             title = title,
             split = split.map {
-                Schedule(
+                Task(
                     title = it,
                     description = "Description for $it",
                     steps = 3,

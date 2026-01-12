@@ -1,7 +1,7 @@
 package me.gogradually.grpcmockserver.service.dto
 
 
-data class SplitSchedule(
+data class SplitTask(
     val title: String,
     val description: String,
     val steps: Int,

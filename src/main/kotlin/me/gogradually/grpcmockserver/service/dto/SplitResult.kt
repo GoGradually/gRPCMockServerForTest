@@ -1,8 +1,8 @@
 package me.gogradually.grpcmockserver.service.dto
 
-import me.gogradually.grpcmockserver.domain.Schedule
+import me.gogradually.grpcmockserver.domain.Task
 
 data class SplitResult(
     val title: String,
-    val split: List<Schedule>
+    val split: List<Task>
 )
